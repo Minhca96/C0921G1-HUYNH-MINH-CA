@@ -2,35 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>chuyen doi tien te</title>
 </head>
 <body>
-<table>
-    <tr>
-        <th>Amount</th>
-        <th>From Currency</th>
-        <th>To currency</th>
-    </tr>
-    <tr>
-        <td><input type="text"></td>
-        <td>
-            <select>
-            <option value="opel">VND</option>
-                <option value="opel">Dollard</option>
-            </select>
-        </td>
-        <td>
-            <select>
-                <option value="opel">Dollard</option>
-                <option value="opel">VND</option>
-            </select>
-        </td>
-    </tr>
-</table>
+<input id="dauvao" type="text">
+<select id="from">
+    <option value="vnd">VietNam</option>
+    <option value="usd">Usd</option>
+</select>
+<select id="to">
+    <option value="vnd">VietNam</option>
+    <option value="usd">Usd</option>
+</select>
+<button onclick="doitien()">convert</button>
 <script>
-    var text;
-    text=
-</script>
+    function doitien() {
 
+        let giatrivao = document.getElementById('dauvao').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        if (from == to){
+            alert(giatrivao);
+        }
+        if (from == "vnd" && to == "usd"){
+            alert(giatrivao/23000);
+        }
+        if (from == "usd" && to == "vnd"){
+            alert(giatrivao*23000);
+        }
+
+
+    }
+
+
+</script>
 </body>
 </html>
