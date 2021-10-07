@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form action="">
+    <input id="a" type="text" placeholder="number">
+        <select name="" id="pheptinh">s
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+    <input id="b" type="text" placeholder="number">
+    <p> <button onclick="tinh()">tính</button>
+            <script>
+                function tinh(){
+                    let a=document.getElementById('a').value
+                    let b=document.getElementById('b').value
+                    let pheptinh=document.getElementById('pheptinh').value
+                    a=parseInt(a)
+                    b=parseInt(b)
+                    if (pheptinh=='+'){ alert(a+b)}
+                    if (pheptinh=='-'){ alert(a-b)}
+                    if (pheptinh=='*')( alert(a*b))
+                    if (pheptinh=='/'){ alert(a/b)}
+                }
+            </script>
+</form>
+</body>
+</html>
