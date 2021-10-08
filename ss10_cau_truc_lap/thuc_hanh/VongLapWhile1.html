@@ -7,11 +7,11 @@
 <body>
 
 <script>
-    let number = parseFloat('nhap gia tri');
+    let number = parseInt(prompt('nhap gia tri'));
     total = 0;
     while (number != -1) {
-        number = prompt('nhap gia tri:');
-        total += number
+        number = parseInt(prompt('nhap gia tri:'));
+        total += total + number;
     }
     document.writeln(total)
 </script>
