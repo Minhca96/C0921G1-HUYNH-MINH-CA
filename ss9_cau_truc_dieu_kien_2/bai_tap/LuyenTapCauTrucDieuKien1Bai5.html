@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xep hang hoc luc hoc sinh dua vao diem thi va kiem tra</title>
+</head>
+<body>
+<script>
+    let diemmottiet = parseFloat(prompt());
+    let diemthi = parseFloat(prompt());
+    let diemtb = (diemmottiet * 2 + diemthi * 3) / 5;
+    if (diemtb < 5) {
+        document.write('loai yeu')
+    } else if (diemtb < 6.5) {
+        document.write('loai trung binh')
+    } else if (diemtb < 9) {
+        document.write('loai kha')
+    } else {
+        document.write('loai gioi')
+    }
+</script>
+</body>
+</html>
