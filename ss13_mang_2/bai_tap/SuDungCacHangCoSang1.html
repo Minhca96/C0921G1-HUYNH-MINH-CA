@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //noi cac phan tu trong mang;
+   let mycolor = ['red', 'green', 'blue', 'white', 'black']
+    mycolor.toString();
+    document.write(mycolor.join(' '));
+    document.write('<br>')
+   //
+   //  // nhap va mang mot so va chen -
+   let number=[1,2,3,4,5,];
+    number.push(7);
+    document.write(number.join('-'))
+    document.write('<br>')
+//Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ
+    // thường trong chuỗi vừa nhập sang thành dạng chữ hoa.
+    // Ví dụ:'The Quick Brown Fox' kết quả của chương trình là 'tHE qUICK bROWN fOX'.
+    // let str = 'The Quick Brown Fox';
+    // let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    // let result = [];
+    //
+    // for(let x=0; x<str.length; x++)
+    // {
+    //     if(UPPER.indexOf(str[x]) !== -1)
+    //     {
+    //         result.push(str[x].toLowerCase());
+    //     }
+    //     else if(LOWER.indexOf(str[x]) !== -1)
+    //     {
+    //         result.push(str[x].toUpperCase());
+    //     }
+    //     else
+    //     {
+    //         result.push(str[x]);
+    //     }
+    // }
+    // document.writeln(result.join(''));
+    //nhap
+    document.writeln('<br>')
+    let str = 'con cho';
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    for (let x = 0; x < str.length; x++) {
+        if (upper.indexOf(str[x]) !== -1) {
+            result.push(str[x].toLowerCase())
+        } else if (lower.indexOf(str[x]) !== 1) {
+            result.push(str[x].toUpperCase())
+        } else {
+            result.push(str[x])
+        }
+
+    }
+    document.writeln(result.join(''));
+</script>
+</body>
+</html>

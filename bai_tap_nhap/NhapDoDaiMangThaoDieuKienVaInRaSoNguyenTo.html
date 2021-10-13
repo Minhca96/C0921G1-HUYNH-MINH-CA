@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //nhập độ dài mảng
+    let x = [];
+    let n = x.length;
+    let flag=false;
+    do{
+        n=prompt('Nhập độ dài mảng: ');
+        if (n>0&&n<20){
+            flag=true
+            document.write ('Độ dài mảng: '+n);
+            document.write('<br>');
+            break;
+        }
+
+    }while(flag);
+    //nhập giá trị vào mảng
+    for (i=0;i<n;i++){
+        x.push(prompt('nhập vào giá trị '+ (i+1) +':'));
+    }document.write ('Các giá trị trong mảng: '+ x);
+    document.write('<br>');
+    document.write('số nguyên tố trong mảng là: ');
+    // kiểm tra snt trong mảng
+
+    let fla = true;
+
+    for (let c = 0; c < x.length; c++) {
+        let value = x[c]
+        for (b = 2; b < value; b++) {
+            if (value % b === 0) {
+                fla = false;
+                break;
+            }
+        }
+        if (fla) {
+
+            document.write(value);
+        }
+
+
+    }
+
+
+
+</script>
+</body>
+</html>
