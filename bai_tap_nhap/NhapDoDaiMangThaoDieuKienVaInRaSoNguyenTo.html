@@ -28,24 +28,42 @@
     document.write('số nguyên tố trong mảng là: ');
     // kiểm tra snt trong mảng
 
-    let fla = true;
-
-    for (let c = 0; c < x.length; c++) {
-        let value = x[c]
-        for (b = 2; b < value; b++) {
-            if (value % b === 0) {
-                fla = false;
-                break;
+    // let fla = true;
+    //
+    // for (let c=2; c < x.length; c++) {
+    //     // let value = x[c]
+    //     for (b = 2; b < c; b++) {
+    //         if (c % b === 0) {
+    //             fla = false ;
+    //
+    //             break;
+    //         }
+    //     }
+    //     if (fla) {
+    //
+    //         document.write(c);
+    //     }
+    //
+    //
+    // }
+    let h
+    let y
+    while ( h< x.length) {
+        if (y >= 2) {
+            let flag = true;
+            for (h = 2; h < y; h++) {
+                if (y % h == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                // count++;
+                document.write(y + ',')
             }
         }
-        if (fla) {
-
-            document.write(value);
-        }
-
-
+        h++
     }
-
 
 
 </script>
