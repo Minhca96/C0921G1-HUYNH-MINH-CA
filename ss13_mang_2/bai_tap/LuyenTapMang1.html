@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bai  1:Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử.
+    // Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.
+    //   let number=parseInt(prompt('nhap so luong phan tu'));
+    //   let array=new Array(number);
+    //   for(let i=0;i<array.length;i++){
+    //       array[i]=prompt(' nhap phan tu thu '+i)
+    //   }
+    //   let count=0;
+    //   for(let i=0;i<array.length;i++){
+    //       if(array[i]>=10){
+    //           count++;
+    //
+    //       }
+    //
+    //   }
+    //   alert(count)
+    // Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+    //     Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+    //    let arrayNumber1=[5,6,7,8,9,23,45,55,25,77,4];
+    //    let max=arrayNumber[0];
+    //    for(let i=1;i<arrayNumber.length;i++){
+    //        if(max<arrayNumber[i]){
+    //            max=arrayNumber[i]
+    //        }
+    //    }
+    //    alert(max)
+    //
+    // Bài 3- Viết chương trình khởi tạo mảng số nguyên.
+    // Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.
+
+    // let number=parseInt(prompt('nhap so luong phan tu'));
+    //   let arrayNumber2=new Array(number);
+    //   for(let i=0;i<arrayNumber2.length;i++){
+    //       arrayNumber2[i]=parseInt(prompt(' nhap phan tu thu '+i))
+    //   }
+    //    let max=arrayNumber2[0];
+    //    let trungBinh=0;
+    //    let tong=0;
+    //    for(let i=0;i<arrayNumber2.length;i++){
+    //        if(arrayNumber2[i]>max){
+    //            max=arrayNumber2[i]
+    //        }
+    //      tong+=arrayNumber2[i] ;
+    //    }
+    //    trungBinh=tong/(arrayNumber2.length);
+    //    document.write('max la:'+max);
+    //    document.write('trung binh:'+trungBinh);
+
+    //Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên
+    // và đảo ngược các phần tử trong mảng đó.
+    // let number=parseInt(prompt('nhap so luong phan tu'));
+    // let arrayNumber=new Array(number);
+    // for(let i=0;i<arrayNumber.length;i++){
+    //     arrayNumber[i]=parseInt(prompt('nhap phan tu'));
+    //     arrayNumber.reverse()
+    // }
+    // alert(arrayNumber)
+
+    //Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi
+
+    // let arrayNumber=[-2,-4,5,-7]
+    // let count=0
+    // for(let i=0;i<arrayNumber.length;i++){
+    //     if(arrayNumber[i]<0){
+    //         count++;
+    //     }
+    // }
+    // alert(count);
+
+    //Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+    // nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không?
+    // Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+    // let v;
+    // let number = parseInt(prompt('số phần tử cần nhập'));
+    // let arrayNumber = new Array(number);
+    //
+    // for (let i = 0; i < arrayNumber.length; i++) {
+    //     arrayNumber[i] = parseInt(prompt('nhap phan tu'));
+    //
+    // }
+    // // mang 1,2,3,4,5
+    // //vd nhap v=1
+    // let flag = false;
+    // v = parseInt(prompt('nhap so can kiem tra'));
+    // for (let i = 0; i < arrayNumber.length; i++) {
+    //     if (arrayNumber[i] == v) {
+    //         flag = true;
+    //         break;
+    //
+    //     }
+    //
+    // }
+    // if (flag==true) {
+    //     alert('ok')
+    //
+    // } else{
+    //     alert('nok')
+    // }
+
+    //Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    // Chương trình kiểm tra xem V có thuộc mảng đã cho không nếu V thuộc mảng đã cho xoá V khỏi mảng
+    // (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,
+    // và gán 0 cho phần tử cuối cùng của mảng)
+
+    let number=parseInt(prompt('mời nhập số phần tử'));
+    let array=new Array(number);
+    for(let i=0;i<array.length;i++){
+        array[i]=parseInt(prompt('moi nhap phan tu'))
+    }
+    let v=parseInt(prompt('nhap phan tu kiem tra'));
+    let fag=false;
+    for(let i=0; i<array.length;i++){
+       if (array[i]==v){
+           flag=true;
+           break;
+       }
+    }if(flag==true){
+       array.splice(v-1,1);
+    document.write(array)
+    }
+    else{document.write('nok')}
+
+
+    //Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+    // Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+    // let number = parseInt(prompt('nhap so luong phan tu'));
+    // let array = new Array(number);
+    // for (let i = 0; i < array.length; i++) {
+    //     array[i] = parseInt(prompt('nhap phan tu'));
+    // }
+    // array.sort();
+    // array.reverse();
+    // document.write(array)
+
+
+</script>
+</body>
+</html>
