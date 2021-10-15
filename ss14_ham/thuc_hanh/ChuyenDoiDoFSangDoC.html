@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--//Xây dựng hàm để chuyển đổi từ độ F cho trước sang độ C theo công thức sau: C = (F - 32)/1.8. -->
+<!--Giao diện mẫu như sau:-->
+<!--        <label>Fahrenheit</label>-->
+<!--        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"-->
+<!--               oninput="temperatureConverter(this.value)"-->
+<!--               onchange="temperatureConverter(this.value)">-->
+<!--    </p>-->
+<!--    <p>Celsius: <span id="outputCelsius"></span></p>-->
+<!--</form>-->
+
+<!--<script>-->
+
+<!--    function temperatureConverter(valNum) {-->
+<!--        valNum = parseFloat(valNum);-->
+<!--        document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;-->
+<!--    }-->
+<!--// </script>-->
+
+
+ <p>chuyen doi do f sang do c</p>
+<input type="number" oninput="nhapnhietdo(this.value)">
+<p>ketqua: <span id="hien thi"></span></p>
+<script>
+    function nhapnhietdo(valNum) {
+valNum=parseFloat(valNum);
+document.getElementById("hien thi").innerHTML=(valNum-32) / 1.8
+    }
+</script>
+
+</body>
+</html>

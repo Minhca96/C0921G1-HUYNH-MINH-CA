@@ -66,14 +66,14 @@
 
     //Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi
 
-    // let arrayNumber=[-2,-4,5,-7]
-    // let count=0
-    // for(let i=0;i<arrayNumber.length;i++){
-    //     if(arrayNumber[i]<0){
-    //         count++;
-    //     }
-    // }
-    // alert(count);
+    let arrayNumber=[-2,-4,5,-7]
+    let count=0
+    for(let i=0;i<arrayNumber.length;i++){
+        if(arrayNumber[i]<0){
+            count++;
+        }
+    }
+    alert(count);
 
     //Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
     // nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không?
@@ -110,23 +110,23 @@
     // (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,
     // và gán 0 cho phần tử cuối cùng của mảng)
 
-    let number=parseInt(prompt('mời nhập số phần tử'));
-    let array=new Array(number);
-    for(let i=0;i<array.length;i++){
-        array[i]=parseInt(prompt('moi nhap phan tu'))
-    }
-    let v=parseInt(prompt('nhap phan tu kiem tra'));
-    let fag=false;
-    for(let i=0; i<array.length;i++){
-       if (array[i]==v){
-           flag=true;
-           break;
-       }
-    }if(flag==true){
-       array.splice(v-1,1);
-    document.write(array)
-    }
-    else{document.write('nok')}
+    // let number=parseInt(prompt('mời nhập số phần tử'));
+    // let array=new Array(number);
+    // for(let i=0;i<array.length;i++){
+    //     array[i]=parseInt(prompt('moi nhap phan tu'))
+    // }
+    // let v=parseInt(prompt('nhap phan tu kiem tra'));
+    // let fag=false;
+    // for(let i=0; i<array.length;i++){
+    //    if (array[i]==v){
+    //        flag=true;
+    //        break;
+    //    }
+    // }if(flag==true){
+    //    array.splice(v-1,1);
+    // document.write(array)
+    // }
+    // else{document.write('nok')}
 
 
     //Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
