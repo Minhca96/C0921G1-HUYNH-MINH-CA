@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--/Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.-->
+<!--// Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.-->
+
+<input type="number" id="nhapso">;
+<input type="button" value="kiemtra" onclick="chayChungTrinh()">
+<p id="ketqua"></p>
+<script>
+
+    function bieuThuc(m){
+        let result=m*100+'cm';
+        return result;
+    }
+    function chayChungTrinh(){
+        let input=document.getElementById("nhapso").value
+        let ketqua=bieuThuc(input)
+        document.getElementById("ketqua").innerHTML='ket qua la:'+ ketqua
+    }
+    </script>
+</body>
+</html>
