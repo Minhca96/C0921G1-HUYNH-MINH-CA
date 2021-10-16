@@ -15,32 +15,34 @@
 <input type="number" id="nhap do dai">
 <select name="" id="chondonvi">
     <option value="feet">Feet</option>
-    <option value="meters">Metter</option>
+    <option value="meter">Meter</option>
 </select>
-<input type="button"  value="chuyen doi" onclick="chuyenDoi()">
+<input type="button" value="chuyen doi" onclick="chuyenDoi()">
 <p id="ketqua"></p>
+
 <script>
-    function feetSangMet(foot){
-        let result = 3.279 * foot ;
-        return result
+    function feetSangMet(foot) {
+        let result = foot/ 0.305 +'(meter)';
+        return result;
     }
     function meterSangFeet(meter){
-        let result=0.305 * meter;
-        return result
+        let  result = meter/3.279 +'(feet)';
+        return result;
     }
-    function chuyenDoi(){
-        let input=document.getElementById("nhap do dai").value;
-        let select=document.getElementById("chondonvi").value;
-        let ketqua=0
-        if(select==='meters'){
-            ketqua=feetSangMet(1);
-            document.getElementById("ketqua").innerHTML='ket qua la:'+ ketqua
-        }
-        else{
-           ketqua=meterSangFeet(2) ;
-           document.getElementById("ketqua").innerHTML='ket qua la:'+ ketqua
+
+    function chuyenDoi() {
+        let input = document.getElementById("nhap do dai").value;
+        let select = document.getElementById("chondonvi").value;
+        let ketqua = 0;
+        if (select === "meter") {
+            ketqua = meterSangFeet(input);
+            document.getElementById("ketqua").innerHTML = 'ket qua la:' + ketqua
+        } else {
+            ketqua = feetSangMet(input);
+            document.getElementById("ketqua").innerHTML = 'ket qua la:' + ketqua
         }
     }
-// </script>
+
+</script>
 </body>
 </html>
