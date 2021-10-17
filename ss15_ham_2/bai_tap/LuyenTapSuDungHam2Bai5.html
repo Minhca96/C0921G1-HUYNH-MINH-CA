@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // function tGTLN() {
+    //     let number = parseInt(prompt());
+    //     let arr = new Array(number);
+    //     for (let i = 0; i < arr.length; i++) {
+    //         arr[i] = parseInt(prompt())
+    //     }
+    //
+    //     let timso = tim(arr);
+    //     alert(timso)
+    // }
+    //
+    // tGTLN()
+    //
+    // function tim(timmax) {
+    //     let max;
+    //     max = timmax[0];
+    //     for (let i = 0; i < timmax.length; i++) {
+    //         if (timmax[i] > max) {
+    //             max = timmax[i]
+    //         }
+    //     }
+    //     return max
+    // }
+
+    function tGTLN() {
+        let number = parseInt(prompt('nhap so luong ky tu can so sanh'));
+        let arr = new Array(number);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt('nhap phan tu'))
+        }
+        let max=arr[0];
+        for(let i=0;i<arr.length;i++){
+            if(max<arr[i]){
+                max=arr[i]
+            }
+
+        }
+        return max
+    }
+    alert(tGTLN())
+</script>
+</body>
+</html>

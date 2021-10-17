@@ -9,20 +9,53 @@
     //Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,
     // in ra các phần tử trong mảng. Chú ý: Sử dụng vòng lặp for lồng nhau
     // // Ví dụ mảng sau:
-    // let number =[[1,2,3],[6,7,8][12,34,54]]
-    // for(let i=0;i<number.length;i++){
-    //     for(let j=0;j<number[i].length;j++){
-    //         for(let k=0;k<number[j].length;k++) {
-    //             document.write(number[i][j][k] + '<br>')
-    //         }
+    //  let a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+    // for(let i in a){
+    //     document.write('mang:'+ i + ' ');
+    //     for(let j in a[i]){
+    //         document.write(a[i][j] +' ')
     //     }
     // }
 
     //Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
     // Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ]
     // sau khi thực hiện đảo ngược sẽ là "162csc"
-    let arrayStr = ['c', 's', 'c', '2', '6', '1'];
-    arrayStr.reverse();
-    alert(arrayStr.join(""));
+    <!--    let arrayStr = ['c', 's', 'c', '2', '6', '1'];-->
+    <!--    arrayStr.reverse();-->
+    <!--    alert(arrayStr.join(""));-->
+
+    // Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+    // Chương trình này đếm số ký tự số trong mảng.
+
+    // Bài 4: Viết một chương trình để đếm số từ trong một chuỗi
+    // let arrayNumber=[3,5,2,6,8]
+    // for( let i=0; i<arrayNumber.length;i++){
+    //     document.write(i)
+    // }
+    // Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+    // let arrayNumberOne=[4,5,6,7]
+    // let arrayNumBerTwo=[4,5,6,7]
+    // for(let i=0;i<arrayNumberOne.length;i++){
+    //     arrayNumberOne[i]
+    // }
+    // for (let j=0;j<arrayNumBerTwo.length;j++){
+    //     arrayNumBerTwo[j]
+    // }
+    // if(arrayNumberOne[i]=arrayNumBerTwo[j]){
+    //     document.write('hai chuoi bang nha')
+    // }
+    // else{
+    //     document.write('hai chuoi khac nhau')
+    // }
+    // Bài 6: Viết chương trình nhập vào một mảng ký tự,
+    //     tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+    let numBer=parseInt(prompt('nhap so luong pha tu trong manng'));
+    let arrayNumber=new Array(numBer);
+    for(let i=0;i<arrayNumber.length;i++){
+      arrayNumber[i]=parseInt(prompt('nhap phan tu'))  ;
+      if(arrayNumber[i]='-'){
+          alert(arrayNumber)
+      }
+    }
 </script>
-</body>
+<!--</body>-->

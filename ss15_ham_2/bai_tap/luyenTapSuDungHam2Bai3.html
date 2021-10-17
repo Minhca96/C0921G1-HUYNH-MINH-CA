@@ -5,16 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<!--Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+
 <script>
-    let so=parseInt(prompt('nhap so can tinh'));
-    let arrayNumber=[]
-    let result=1
-    for(let i=0;i<arrayNumber.length;i++){
-        arrayNumber[i]=so;
-      result++
+    function tinhGiaThua(n) {
+        result = 1
+        for (let i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result
     }
-alert(result)
+    let number=parseInt(prompt('nhap so can tinh'))
+    let ketqua=tinhGiaThua(number)
+    alert('gia thua cua '+number+' la '+ketqua)
 </script>
 </body>
 </html>
