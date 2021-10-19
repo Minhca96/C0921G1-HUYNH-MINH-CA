@@ -11,13 +11,13 @@
     let number = parseInt(prompt('moi nhap ki tu can kiem tra'));
 
     function kiemTra(i) {
-
+let result='';
         if (i % 2 == 0 || i % 2 == 1) {
-            i = 'la so'
+            result= 'la so'
         } else {
-            i = 'khong phai so'
+            result= 'khong phai so'
         }
-        return i
+        return result
     }
 
     alert(kiemTra(number))

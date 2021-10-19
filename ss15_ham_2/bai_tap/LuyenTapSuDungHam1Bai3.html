@@ -9,24 +9,18 @@
     //Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai,
     // hiển thị hộp thoại thông báo cho người dùng.
     // Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
-    let thamSoThuNhat = parseInt(prompt('moi nhap tham so'));
-    let thamSoThuhai = parseInt(prompt('moi nhap tham so'));
 
-    function kiemTrath1() {
-        result = thamSoThuNhat + '>' + thamSoThuhai;
-        return result
-    }
+    function kiemTra(ts1,ts2){
 
-    function kiemTrath2() {
-        result = thamSoThuNhat + thamSoThuhai;
-        return result
+        let result='';
+        if(ts1>ts2){
+           result='ts1 lon hon ts2'
+        } else{
+            result=ts1+ts2;
+        }
+        return result;
     }
-    if(thamSoThuNhat>thamSoThuhai){
-        alert(kiemTrath1())
-    }
-    else{
-        alert(kiemTrath2())
-    }
+    alert(kiemTra(7,9))
 
 </script>
 </body>
