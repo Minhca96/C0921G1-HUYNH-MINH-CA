@@ -6,9 +6,36 @@
 </head>
 <body>
 <script>
-    class Temperature{
-        constructor() {
+    class Temperature {
+        constructor(C) {
+            this.C = C
         }
+
+        getC() {
+            return this.C
+        }
+
+        doF() {
+            let result = this.C + 9 / 5 + 32;
+            return result
+        }
+
+        kenvin() {
+            let result = this.C + 273.15
+            return result
+        }
+    }
+
+    let nhietDo = new Temperature(25)
+    let nhieDoC = nhietDo.getC();
+    document.write(nhieDoC);
+    document.write('<br>')
+    let nhietDoF = nhietDo.doF();
+    document.write(nhietDoF);
+    document.write('<br>')
+    let nhietdoKenvi = nhietDo.kenvin();
+    document.write(nhietdoKenvi)
+
 </script>
 
 </body>

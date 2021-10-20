@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10;
+
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+
+        }
+    }
+
+    class human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name
+
+        }
+
+        setName(name) {
+            this.name = name
+        }
+
+        getIsMale() {
+            return this.gender
+        }
+
+        setIsMale(gender) {
+            this.gender = gender
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+        setWeight(weight) {
+            this.weight = weight
+        }
+
+        say(string) {
+            return alert(string)
+        }
+
+        eat(eat) {
+
+          if (eat === true){
+            return this.weight++ ;
+          }
+
+        }
+
+
+    }
+
+    let nga = new human('nga', 'congai', 50);
+    let nga2 = new human('nga', 'congai', 70);
+    let apple = new Apple();
+    let ten = nga.getName();
+    alert(ten);
+
+    nga.say('iloveyou');
+    nga2.say('m ngu quas ');
+    // let Tao=new Apple(300)
+    // let kl=Tao.getWeight();
+    // alert(kl);
+    while (apple.weight > 0) {
+        nga.eat(true) && nga2.eat(true)
+        apple.weight -= 2;
+        alert(apple.weight);
+    }
+    let caNang = nga.getWeight();
+    alert(caNang);
+let thuoctinh= alert(nga.getWeight()+ nga.getName()+nga.getIsMale())
+
+</script>
+</body>
+</html>

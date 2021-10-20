@@ -33,25 +33,25 @@
     //     document.write(i)
     // }
     // Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
-    let arrayNumberOne=[4,5,6,7]
-    let arrayNumBerTwo=[4,5,6,7]
-    for(let i=0;i<arrayNumberOne.length;i++){
-        if(arrayNumberOne[i]==arrayNumBerTwo[j]) {
-        document.write('hai chuoi bang nha')}
-        else{
-        document.write('hai chuoi khac nhau')
-    }
-        break;
-    }
+    // let arrayNumberOne=[4,5,6,7]
+    // let arrayNumBerTwo=[4,5,6,7]
+    // for(let i=0;i<arrayNumberOne.length;i++){
+    //     if(arrayNumberOne[i]==arrayNumBerTwo[j]) {
+    //     document.write('hai chuoi bang nha')}
+    //     else{
+    //     document.write('hai chuoi khac nhau')
+    // }
+    //     break;
+    // }
     // Bài 6: Viết chương trình nhập vào một mảng ký tự,
     //     tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
-    // let numBer=parseInt(prompt('nhap so luong pha tu trong manng'));
-    // let arrayNumber=new Array(numBer);
-    // for(let i=0;i<arrayNumber.length;i++){
-    //   arrayNumber[i]=parseInt(prompt('nhap phan tu'))  ;
-    //   if(arrayNumber[i]='-'){
-    //       alert(arrayNumber)
-    //   }
-    // }
+
+    let arrayNumber=['-','=',8,'-']
+    for(let i=0;i<arrayNumber.length;i++){
+      if(arrayNumber[i]==='-'){
+          arrayNumber[i]='_'
+      }
+    }
+    alert(arrayNumber)
 </script>
 <!--</body>-->
