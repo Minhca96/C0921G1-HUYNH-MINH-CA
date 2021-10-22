@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 5: Giả sử menu của chúng ta có các loại thức uống như sau:-->
+<!--Cafe-->
+<!--Cam vắt-->
+<!--Nước ép cà rốt-->
+<!--Nước ép cà chua-->
+<!--Nước lọc-->
+<!--Nước dừa-->
+<!--Viết một chương trình gọi thức uống đơn giản.-->
+<!--Gợi ý: Trước tiên in ra màn hinh danh sách các loại thức uống cho người dùng chọn lựa-->
+<!--Đánh dấu theo thứ tự 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa),-->
+<!--7(thoát gọi món)-->
+<!--Khi người dùng lựa chọn 1 trong số các thức uống, -->
+<!--chương trình sẽ hiện đơn giá của thức uống đó và cho phép người dùng nhập số lượng.-->
+<!--Cuối cùng hiển thị tổng số tiền người dùng cần phải trả.-->
+<!--Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống, -->
+<!--kết thúc quá trình đặt thức uống khi người nhấn số 7-->
+<script>
+    let thucDon=['cafe', 'cam vắt','nước ép cà rốt','nuoc ep xoai']
+    let gia=[10000,20000,30000,15000];
+    let sl=[0,0,0,0]
+
+    do{
+        let choose = prompt('1 (cafe), 2 (cam vắt), 3(nước ép cà rốt,4(nuoc ep xoai),5(huy chon)');
+        let soLuong=0
+        let result=""
+        switch(choose){
+            case '1':
+                soLuong=parseInt(prompt('cho so luong'+ thucDon[0]+' voi gia '+ gia[0]))
+                sl[0]+=soLuong;
+                break;
+            case '2':
+                soLuong=parseInt(prompt('cho so luong'+ thucDon[1]+' voi gia '+ gia[1]))
+                sl[1]+=soLuong;
+                break;
+            case '3':
+                soLuong=parseInt(prompt('cho so luong'+ thucDon[2]+' voi gia '+ gia[2]))
+                sl[2]+=soLuong;
+                break;
+            case '4':
+                soLuong=parseInt(prompt('cho so luong'+ thucDon[3]+' voi gia '+ gia[3]))
+                sl[3]+=soLuong;
+                break;
+            case '5':
+                while (false);
+                default:
+
+        }
+        for(let i=0;i<sl.length;i++){
+            if(sl[i]!=0){
+                result+=thucDon[i]+': '+sl[i]*gia[i]+ '\n';
+
+            }
+        }
+        alert(result)
+    }
+    while(true);
+</script>
+</body>
+</html>
