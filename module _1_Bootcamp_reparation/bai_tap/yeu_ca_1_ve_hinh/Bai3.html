@@ -6,13 +6,23 @@
 </head>
 <body>
 <script>
+    // Bài 3: Vẽ tam giác cân đặc có chiều cao h. Ví dụ: h = 5
     let m=5;
-    let n=5;
+    let n=9;
     for(let i=1;i<=m;i++){
         for(let j=1;j<=n;j++){
+            if(i>m||j<-i+6||j>i+4){
+                document.write('&nbsp&nbsp');
+            }else{
+                document.write('*');
+
+            }
+
+            }
+        document.write('</br>');
 
         }
-    }
+
 </script>
 </body>
 </html>

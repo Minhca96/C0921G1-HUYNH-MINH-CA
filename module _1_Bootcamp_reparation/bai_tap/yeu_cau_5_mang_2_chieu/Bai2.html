@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 2: Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều,
+    //     đếm các số nguyên tố có trong mảng đó.
+    let number1=parseInt(prompt('nhap so luong pt index 1'));
+    let number2=parseInt(prompt('nhat so luong pt index 2 '));
+    let Arr=[];
+    let result=[];
+    let count=0
+    for(let i=0;i<number1.length;i++){
+        Arr[i]=[];
+        for(let j=0;j<number2.length;j++){
+            Arr[i][j]=parseInt(prompt('['+[i]+']'+'['+[j]+']'));
+
+            if(Arr[i][j]>=2){
+               if(Arr[i][j]%j!==0){
+                  count++
+               }
+
+
+                }
+            }
+
+        }
+document.write(count)
+
+</script>
+</body>
+</html>

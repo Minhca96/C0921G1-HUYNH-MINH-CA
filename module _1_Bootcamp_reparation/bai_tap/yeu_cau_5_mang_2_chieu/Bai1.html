@@ -6,16 +6,42 @@
 </head>
 <body>
 <script>
-// <!--    Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n.-->
-// <!--    Với m, n là các số nhập từ bàn phím.-->
-    let num=prompt('moi nhap day so M');
-let num1=prompt('moi nhap day so M');
-    let arrayNum=new Array(num)
-for(let i=0;i<arrayNum.length;i++){
-    let arrayNum1=new Array(num1);
-    for (let j=0;j<arrayNum1.length;i++)
+   let number=parseInt(prompt('moi nhap so luong phan tu index 1'));
+   let number1=parseInt(prompt('moi nhap so luong phan tu  index 2'));
+   let Arr=[];
+   let sum=0;
+   for(let i=0;i<number;i++){
+       Arr[i]=[];
+       for(let j=0;j<number1;j++){
+           Arr[i][j]=parseInt(prompt('['+[i]+']'+'['+[j]+']'));
+           if(Arr[i][j]%2==0){
+               sum+=Arr[i][j]
+           }
+       }
+   }
+document.write(sum)
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

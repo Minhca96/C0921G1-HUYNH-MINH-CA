@@ -39,27 +39,29 @@
     // }
     //
     // //3. hinh tam giac 2
-    // for (let i = 1; i <= row; i++) {
-    //     //côt
-    //     for (let j = 1; j <= (col - i); j++) {
-    //         document.write("*");
-    //     }
-    //     document.write("<br>");
-    // }
-    //
-    // //4. hinh tam giac 3
     let row = 5;
     let col = 5;
     for (let i = 1; i <= row; i++) {
         //côt
-        for (let j = 1; j <= (col - i); j++) {
-            document.write("&nbsp&nbsp");
-        }
-        for (let j = 0; j < i; j++) {
+        for (let j = 1; j <= (col +1 - i); j++) {
             document.write("*");
         }
         document.write("<br>");
     }
+    //
+    // //4. hinh tam giac 3
+    // let row = 5;
+    // let col = 5;
+    // for (let i = 1; i <= row; i++) {
+    //     //côt
+    //     for (let j = 1; j <= (col - i); j++) {
+    //         document.write("&nbsp&nbsp");
+    //     }
+    //     for (let j = 0; j < i; j++) {
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
     // // hình chữ nhật rỗng
     //
     // let row = 5;
