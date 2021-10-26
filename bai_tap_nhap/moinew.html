@@ -5,41 +5,42 @@
     <title>Title</title>
 </head>
 <body>
+
 <input type="button" value="Add New Worker" onclick="addNewWorker()">
 <p id="ketQua"></p>
 <script>
-        class Worker{
-            constructor(name, age, salary) {
-                this.name = name;
-                this.age = age;
-                this.salary = salary;
-            }
-
-            getName() {
-                return this.name;
-            }
-
-            getAge() {
-                return this.age;
-            }
-
-            getSalary() {
-                return this.salary;
-            }
-
-            setName(name) {
-                this.name = name;
-            }
-            setAge(age){
-                this.age= age;
-            }
-            setSalary(salary){
-                this.salary =salary;
-            }
-            toString(){
-                return "name: "+ this.name + "-age: "+ this.age+ "-salary: "+ this.salary;
-            }
+    class Worker{
+        constructor(name, age, salary) {
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
         }
+
+        getName() {
+            return this.name;
+        }
+
+        getAge() {
+            return this.age;
+        }
+
+        getSalary() {
+            return this.salary;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+        setAge(age){
+            this.age= age;
+        }
+        setSalary(salary){
+            this.salary =salary;
+        }
+        toString(){
+            return "name: "+ this.name + "-age: "+ this.age+ "-salary: "+ this.salary;
+        }
+    }
 
     function addNewWorker() {
         let newName= prompt("Nhập tên cần thêm");
@@ -51,24 +52,24 @@
     }
 
     function display(arrayWorker) {
-        let tableString ='<table border="1">\n' +
-            '    <tr>\n' +
-            '        <th>STT</th>/n' +
-            '        <th>Name</th>/n' +
-            '        <th>Age</th>/n' +
-            '        <th>Salary</th>/n' +
-            '        <th>Edit</th>/n' +
-            '        <th>Delete</th>/n' +
+        let tableString ='<table border="1">' +
+            '    <tr>' +
+            '        <th>STT</th>' +
+            '        <th>Name</th>' +
+            '        <th>Age</th>' +
+            '        <th>Salary</th>' +
+            '        <th>Edit</th>' +
+            '        <th>Delete</th>' +
             '    </tr>';
 
         for (let i=0;i<arrayWorker.length;i++){
             tableString+='<tr>\n' +
-                '       <td>'+(i+1)+'</td>\n' +
-                '       <td>'+arrayWorker[i].getName()+'</td>\n' +
-                '       <td>'+arrayWorker[i].getAge()+'</td>\n' +
-                '       <td>'+arrayWorker[i].getSalary()+'</td>\n' +
-                '       <td><input type="button" value="Edit" onclick="editWorker('+i+')"></td>\n' +
-                '       <td><input type="button" value="Delete" onclick="deleteWorker('+i+')"></td>\n' +
+                '       <td>'+(i+1)+'</td>' +
+                '       <td>'+arrayWorker[i].getName()+'</td>' +
+                '       <td>'+arrayWorker[i].getAge()+'</td>' +
+                '       <td>'+arrayWorker[i].getSalary()+'</td>' +
+                '       <td><input type="button" value="Edit" onclick="editWorker('+i+')"></td>' +
+                '       <td><input type="button" value="Delete" onclick="deleteWorker('+i+')"></td>' +
                 '    </tr>';
         }
         tableString+='</table>';

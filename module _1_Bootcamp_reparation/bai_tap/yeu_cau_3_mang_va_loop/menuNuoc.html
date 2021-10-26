@@ -21,46 +21,74 @@
 <!--Cuối cùng hiển thị tổng số tiền người dùng cần phải trả.-->
 <!--Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống, -->
 <!--kết thúc quá trình đặt thức uống khi người nhấn số 7-->
+
+<div style="color: red"><p>Menu</p>
+    <p>1: Nuoc Cam</p>
+    <p>2: Nuoc Mia</p>
+    <p>3: Nuoc Dua</p>
+    <p>4: Xac Nhan</p>
+<p id="ketQua" >thanh tien:</p>
+<input type="button" value="Chon mon" onclick="tienNuoc()" >
+</div>
 <script>
-    let thucDon=['cafe', 'cam vắt','nước ép cà rốt','nuoc ep xoai']
-    let gia=[10000,20000,30000,15000];
-    let sl=[0,0,0,0]
+    function tienNuoc() {
+        let menu = ['Nuoc Cam', 'Nuoc Mia', 'Nuoc Dua'];
+        let gia = [15000, 20000, 30000];
+        let tongGiaTungMon;
+        let tongTienPhaiTra=0;
+        let chonMon;
+        let sL;
+        do {
+            chonMon = parseInt(prompt('moi chon mon'));
 
-    do{
-        let choose = prompt('1 (cafe), 2 (cam vắt), 3(nước ép cà rốt,4(nuoc ep xoai),5(huy chon)');
-        let soLuong=0
-        let result=""
-        switch(choose){
-            case '1':
-                soLuong=parseInt(prompt('cho so luong'+ thucDon[0]+' voi gia '+ gia[0]))
-                sl[0]+=soLuong;
-                break;
-            case '2':
-                soLuong=parseInt(prompt('cho so luong'+ thucDon[1]+' voi gia '+ gia[1]))
-                sl[1]+=soLuong;
-                break;
-            case '3':
-                soLuong=parseInt(prompt('cho so luong'+ thucDon[2]+' voi gia '+ gia[2]))
-                sl[2]+=soLuong;
-                break;
-            case '4':
-                soLuong=parseInt(prompt('cho so luong'+ thucDon[3]+' voi gia '+ gia[3]))
-                sl[3]+=soLuong;
-                break;
-            case '5':
-                while (false);
-                default:
+                if (chonMon >= 1 && chonMon <= 3){
+                    sL = parseInt(prompt('chon so luong'));
+                    tongGiaTungMon =  gia[chonMon - 1] * sL;
+                    alert('tong tien'+menu[chonMon-1]+tongGiaTungMon)
+                    tongTienPhaiTra += tongGiaTungMon;
+                }
 
         }
-        for(let i=0;i<sl.length;i++){
-            if(sl[i]!=0){
-                result+=thucDon[i]+': '+sl[i]*gia[i]+ '\n';
-
-            }
-        }
-        alert(result)
+        while (chonMon !== 4);
+        document.getElementById("ketQua").innerHTML = 'tong tien phai tra: '+tongTienPhaiTra;
     }
-    while(true);
+
 </script>
+
+
+<!--    // do{-->
+<!--    //     let choose = prompt('x');-->
+<!--    //     let soLuong=0-->
+<!--    //     let result=""-->
+<!--    //     switch(choose){-->
+<!--    //         case '1':-->
+<!--    //             soLuong=parseInt(prompt('cho so luong'+ thucDon[0]+' voi gia '+ gia[0]))-->
+<!--    //             sl[0]+=soLuong;-->
+<!--    //             break;-->
+<!--    //         case '2':-->
+<!--    //             soLuong=parseInt(prompt('cho so luong'+ thucDon[1]+' voi gia '+ gia[1]))-->
+<!--    //             sl[1]+=soLuong;-->
+<!--    //             break;-->
+<!--    //         case '3':-->
+<!--    //             soLuong=parseInt(prompt('cho so luong'+ thucDon[2]+' voi gia '+ gia[2]))-->
+<!--    //             sl[2]+=soLuong;-->
+<!--    //             break;-->
+<!--    //         case '4':-->
+<!--    //             soLuong=parseInt(prompt('cho so luong'+ thucDon[3]+' voi gia '+ gia[3]))-->
+<!--    //             sl[3]+=soLuong;-->
+<!--    //             break;-->
+<!--    //-->
+<!--    //-->
+<!--    //     }-->
+<!--&lt;!&ndash;    //     for(let i=0;i<sl.length;i++){&ndash;&gt;-->
+<!--    //         if(sl[i]!=0){-->
+<!--    //             result+=thucDon[i]+': '+sl[i]*gia[i]+ '\n';-->
+<!--    //-->
+<!--    //         }-->
+<!--    //     }-->
+<!--    //     alert(result)-->
+<!--    // }-->
+<!--    // while(choose!==5);-->
+<!--// </script>-->
 </body>
 </html>

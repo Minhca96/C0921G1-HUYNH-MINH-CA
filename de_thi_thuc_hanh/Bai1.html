@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Câu 1: Nhập từ bàn phím mảng số nguyên a gồm n phần tử (n<=50),-->
+<!--đưa ra màn hình mảng vừa nhập vào và 1 mảng mới b bao gồm tất cả các số nguyên tố của mảng a.-->
+<!--Thang điểm-->
+<script>
+    function kiemTraSNT(so){
+        if(so<2){
+            return false;
+        }else{
+            for(let i=2;i<=Math.sqrt(so);i++){
+                if(so%2==0){
+                    return false;
+                }
+            }
+            return true
+        }
+    }
+    let Number=parseInt(prompt('so luong phan tu muon nha'));
+    let arrNumber=new Array(Number);
+    let arrayNew=[];
+    if(arrNumber.length<=50){
+        for(let i=0;i<arrNumber.length;i++){
+            arrNumber[i]=parseInt(prompt('nhap ca phan tu'))
+           if(kiemTraSNT(arrNumber[i])==true){
+               arrayNew.push(arrNumber[i]);
+           }
+        }
+    }
+    document.write('mang nhap va la: '+arrNumber+'</br>');
+    document.writeln('mang so nt la: '+ arrayNew);
+</script>
+</body>
+</html>

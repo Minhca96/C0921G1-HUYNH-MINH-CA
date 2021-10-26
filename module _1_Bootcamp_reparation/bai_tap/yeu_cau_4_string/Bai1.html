@@ -18,19 +18,20 @@
     // b4:xét duyệt loại bỏ ký tự rổng
     // b5:chuyển ký tự đầu của phần tư thành in hoa
     // b6:in ra mảng các phần tủ bên trong được nối lại
-let chuoi=prompt('moi nhap chuoi');
-chuoi=chuoi.trim();
-let arrMang=chuoi.toLowerCase().split(' ');
-for(let i=0;i<arrMang.length;i++){
-    if(arrMang[i]==''){
-        arrMang.splice(i,1);
-        i--
-    }
-}
-for(let i=0;i<arrMang.length;i++){
-    arrMang[i]=arrMang[i][0].toUpperCase()+arrMang[i].slice(1);
-}
-alert(arrMang.join(' '))
+   let string=prompt('moi nhap chuoi');
+   string=string.trim();
+   let arrString=string.toLowerCase().split(' ');
+   for(let i=0;i<arrString.length;i++){
+       if(arrString[i]===''){
+           arrString.splice(i,1);
+           i--;
+       }
+   }
+   for(let i=0;i<arrString.length;i++){
+   arrString[i]=arrString[i][0].toUpperCase()+arrString[i].slice(1);
+
+   }
+    document.write(arrString.join(' '))
 </script>
 </body>
 </html>

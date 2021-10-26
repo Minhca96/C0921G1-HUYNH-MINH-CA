@@ -5,9 +5,10 @@
     <title>Title</title>
 </head>
 <body>
+<p id="ketQua"></p>
 <script>
     class Worker{
-        constructor(name,age,salary){
+        constructor( name,age,salary){
             this.name=name;
             this.age=age;
             this.salary=salary;
@@ -30,9 +31,36 @@
         setSalary(salary){
             this.salary=salary;
         }
-        toString()
-        { return 'name '+thís.name+' age '+this.age+' salary '+this.salary}
+        toString(){
+        return 'name la: '+this.name+' age la: '+this.age+' salsry la: '+this.salary;
+        }
     }
+    function disPlay(arrayWorker) {
+        let tabletoString = '<table boder="1">' +
+            '<tr>' + '<th>STT</th>' +
+            '<th>Name</th>' +
+            '<th>Age</th>' +
+            '<th>Salary</th>' +
+            '<th>Edit</th>' +
+            '<th>Delete</th>' + '</tr>'
+
+
+        for (let i = 0; i < arrayWorker.length; i++) {
+            tabletoString += '<tr>' +
+                '<td>' + (i + 1) + '</td>' +
+                '<td>' + arrayWorker.getName() + '</td>' +
+                '<td>' + arrayWorker.getAge() + '</td>' +
+                '<td>' + arrayWorker.getSalary() + '</td>' +
+                '<td><input type="button" value="Edit" onclick="editWorker(+i+)">' +
+                '<td><input type="button" value="Delate" onclick="delateWorker(+i+)"></td>' +
+                '</tr>' }
+               tabletoString+='</table>'
+        document.getElementById("ketQua").innerHTML=tabletoString
+
+
+
+    }
+
 </script>
 </body>
 </html>
