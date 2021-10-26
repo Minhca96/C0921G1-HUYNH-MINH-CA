@@ -42,14 +42,7 @@
         }
     }
 
-    function addNewWorker() {
-        let newName= prompt("Nhập tên cần thêm");
-        let newAge= prompt(" nhập tuổi cần them");
-        let newSalary= prompt(" nhập lương cần thêm");
-        let worker = new Worker(newName, newAge,newSalary);
-        workerList.push(worker);
-        display(workerList);
-    }
+
 
     function display(arrayWorker) {
         let tableString ='<table border="1">' +
@@ -89,14 +82,19 @@
         workerList.splice(index,1);
         display(workerList);
     }
+
+    function addNewWorker() {
+        let newName= prompt("Nhập tên cần thêm");
+        let newAge= prompt(" nhập tuổi cần them");
+        let newSalary= prompt(" nhập lương cần thêm");
+        let worker = new Worker(newName, newAge,newSalary);
+        workerList.push(worker);
+        display(workerList);
+    }
     // Hiên thị
     let workerList = [];
     let worker1 = new Worker("Chanh1",18,1000);
-    let worker2 = new Worker("Chanh2",18,1000);
-    let worker3 = new Worker("Chanh3",18,1000);
     workerList.push(worker1);
-    workerList.push(worker2);
-    workerList.push(worker3);
     display(workerList);
 </script>
 </body>

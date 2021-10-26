@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="Add New Worker" onclick="addNewWorker()">
+<p id="ketQua"></p>
+<script>
+    class soTietKiem{
+        constructor(maSo, loaiTietKiem, ten,ngayMoSo,soTienGui) {
+            this.maSo = maSo;
+            this.loaiTietKiem= loaiTietKiem;
+            this.ten = ten;
+            this.ngayMoSo=ngayMoSo;
+            this.soTienGui=soTienGui;
+        }
+
+
+        getMaSo() {
+            return this.maSo;
+        }
+
+        getLoaiTietKiem() {
+            return this.loaiTietKiem;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+        getNgayMoSo(){
+          return   this.ngayMoSo;
+        }
+        getSoTienGui(){
+          return   this.soTienGui
+        }
+
+        setMaSo(maSo) {
+             this.maSo=maSo
+        }
+
+        setLoaiTietKiem(loaiTietKiem) {
+             this.loaiTietKiem=loaiTietKiem
+        }
+
+        setTen(ten) {
+            this.ten=ten;
+        }
+        setNgayMoSo(ngayMoSo){
+            this.ngayMoSo=ngayMoSo;
+        }
+        setSoTienGui(soTienGui){
+            this.soTienGui=soTienGui
+        }
+
+        }
+
+
+
+
+    function display(soTietKiem) {
+        let tableString ='<table border="1">' +
+            '    <tr>' +
+            '        <th>STT</th>' +
+            '        <th>Ma So</th>' +
+            '        <th>Loai Tiet Kiem</th>' +
+            '        <th>ten</th>' +
+            '        <th>Ngay Gui</th>' +
+            '        <th>Tien Gui</th>' +
+            '        <th>Edit</th>' +
+            '        <th>Delete</th>' +
+            '    </tr>';
+
+        for (let i=0;i<soTietKiem.length;i++){
+            tableString+='<tr>\n' +
+                '       <td>'+(i+1)+'</td>' +
+                '       <td>'+soTietKiem[i].getMaSo()+'</td>' +
+                '       <td>'+soTietKiem[i].getLoaiTietKiem()+'</td>' +
+                '       <td>'+soTietKiem[i].getTen()+'</td>' +
+                '       <td>'+soTietKiem[i].getNgayMoSo()+'</td>' +
+                '       <td>'+soTietKiem[i].getSoTienGui()+'</td>' +
+                '       <td><input type="button" value="Edit" onclick="editSoTietKiem('+i+')"></td>' +
+                '       <td><input type="button" value="Delete" onclick="deleteSoTietKiem('+i+')"></td>' +
+                '    </tr>';
+        }
+        tableString+='</table>';
+        document.getElementById("ketQua").innerHTML=tableString;
+    }
+    function editSoTietKiem(index){
+        let newMaSo= prompt("ma so");
+        let newLoaiTietKiem= prompt(" loai so");
+        let newTen= prompt(" ten");
+        let newNgayMoso= prompt(" ngay mo");
+        let newSoTienGui= prompt(" tien gui");
+        listSoTietKiem[index].setMaSo(newMaSo);
+        listSoTietKiem[index].setLoaiTietKiem(newLoaiTietKiem);
+        listSoTietKiem[index].setTen(newTen);
+        listSoTietKiem[index].setNgayMoSo(newNgayMoso);
+        listSoTietKiem[index].setSoTienGui(newSoTienGui);
+        display(listSoTietKiem);
+
+    }
+    function deleteSoTietKiem(index){
+        let xacNhan = confirm('muon xoa khong')
+        if(xacNhan){
+            listSoTietKiem.splice(index,1);
+        }
+        display(listSoTietKiem);
+    }
+
+    function addNewWorker() {
+        let newMaSo= prompt("ma so");
+        let newLoaiTietKiem= prompt(" loai so");
+        let newTen= prompt(" ten");
+        let newNgayMoso= prompt(" ngay mo");
+        let newSoTienGui= prompt(" tien gui");
+        let tietKiem =new soTietKiem(newMaSo,newLoaiTietKiem,newTen,newNgayMoso,newSoTienGui,soTietKiem);
+        if (!check(newMaSo)){
+            listSoTietKiem.push(tietKiem);
+        }else {
+            alert('da trung ma so');
+        }
+        display(listSoTietKiem);
+    }
+    function check(sum){
+        if (listSoTietKiem.includes(sum)){
+            return false;
+        }else {
+            return true;
+        }
+    }
+    // Hiên thị
+    let listSoTietKiem =[];
+    let khach1 = new soTietKiem(0,'fdsfs',234324,234324,2342);
+    listSoTietKiem.push(khach1);
+    display(listSoTietKiem);
+</script>
+</body>
+</html>
